@@ -25,3 +25,25 @@ It only fires after a click. Forgetting `() =>` and writing `onClick={alert('cli
 ## Constructor
 In JavaScript classes, you need to always call super when defining the constructor of a subclass. All React component classes that have a constructor should start it with a super(props) call.
 
+## immutability
+Why immutability is important? Becaouse, immutability makes complex features much easier to implement. 
+In application, an ability to undo and redo certain actions is a common requirement.
+Avoiding direct data mutation lets us keep previous versions history intact, and reuse them later.
+
+About detecting changes
+Detecting changes in mutable objects is difficult because they are modified directly.
+This detection requires the mutable object to be compared to previous copies of itself and the entire object tree to be traversed.
+Detecting changes in immutable objects is considerably easier. If the immutable object that is being referenced is different than the previous one, then the object has changed.
+
+
+Re-render in React
+The main benefit of immutability is that it helps you build pure components in React.
+Immutable data can easily determine if changes have been made which helps to determine when a component requires re-rendering.
+
+
+
+
+## Function component
+In React, function components are a simpler way to write components that only contain a render method and don’t have their own state.
+Instead of defining a class which extends React.Component, we can write a function that takes props as input and returns what should be rendered. 
+Function components are less tedious to write than classes, and many components can be expressed this way.
